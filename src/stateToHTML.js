@@ -12,7 +12,7 @@ import {
   INLINE_STYLE,
 } from 'draft-js-utils';
 
-import type {ContentState, ContentBlock, EntityInstance} from 'draft-js';
+import type {ContentState, ContentBlock, EntityInstance} from global.Draft
 import type {CharacterMetaList} from 'draft-js-utils';
 
 type AttrMap = {[key: string]: string};
@@ -64,7 +64,7 @@ const DEFAULT_STYLE_ORDER = [BOLD, ITALIC, UNDERLINE, STRIKETHROUGH, CODE];
 
 // Map entity data to element attributes.
 const ENTITY_ATTR_MAP: {[entityType: string]: AttrMap} = {
-  [ENTITY_TYPE.LINK]: {url: 'href', rel: 'rel', target: 'target', title: 'title', className: 'class'},
+  [ENTITY_TYPE.LINK]: {href: 'href', rel: 'rel', target: 'target', title: 'title', className: 'class'},
   [ENTITY_TYPE.IMAGE]: {src: 'src', height: 'height', width: 'width', alt: 'alt', className: 'class'},
 };
 
