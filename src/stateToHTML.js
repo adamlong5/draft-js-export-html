@@ -4,7 +4,7 @@ import combineOrderedStyles from './helpers/combineOrderedStyles';
 import normalizeAttributes from './helpers/normalizeAttributes';
 import styleToCSS from './helpers/styleToCSS';
 
-import {Entity} from 'draft-js';
+const {Entity} = global.Draft;
 import {
   getEntityRanges,
   BLOCK_TYPE,
